@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    overflow-x: hidden;
+    height: 100%;
+    color: #1b1c1f;
+}
+
+body .main {
+    margin: 2em 1em;
+}
+
+body .main .lotto-configs-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+body .main .error-message {
+    display: none;
+    margin-left: 0.5em;
+    color: tomato;
+    font-weight: 600;
+    font-size: .9em;
+}
+body .main .error-message-back {
+    margin-left: 0.5em;
+    color: tomato;
+    font-weight: 600;
+    font-size: .9em;
+}
+
+
+body .main #lottery-table table,
+body .main #lottery-table table th,
+body .main #lottery-table table td {
+    border: 1px solid black;
+}
+
+body .main form .form-field:first-child {
+    margin-top: 1.5em;
+}
+
+body .main form .form-field {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+body .main form .form-field label {
+    font-weight: 600;
+    margin-right: .5em;
+}
+
+body .main form .form-field select {
+    padding: 5px 10px;
+}
+
+body .main #lottery-table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+body .main #lottery-table table {
+    font-size: 1.3em;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+body .main #lottery-table table td {
+    padding: 10px;
+    transition: .25s ease;
+}
+
+body .main #lottery-table table td:hover,
+body .main #lottery-table table td:focus,
+body .main #lottery-table table td:active,
+body .main #lottery-table table td.selected {
+    background-color: lightgreen;
+    color: #fff;
+    cursor: default;
+}
+
+body .main .drawn-row-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 1.5em;
+}
+
+body .main .drawn-row-wrapper .drawn-row-column {
+    flex: 0 0 47%;
+}
+
+body .main .drawn-row-wrapper .drawn-row-column:last-child {
+    text-align: right;
+    border-left: 2px solid #dadada;
+    padding-right: 1.5em;
+}
+
+body .main .drawn-row-wrapper .drawn-row-column .drawn-row-item {
+    border-bottom: 2px solid #dadada;
+    padding-top: 1em;
+}
+
+body .main .drawn-row-wrapper .heading {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+body .main .btn {
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #25a168;
+    color: #fff;
+    border: 1px solid #b0dfca;
+    border-radius: 15px;
+    outline: none;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 7px 30px;
+    margin-bottom: 1.5em;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+body .main .btn.btn__play {
+    background-color: #25a168;
+    color: #fff;
+}
+
+body .main .btn[disabled=disabled],
+body .main .btn:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #a4a4a4;
+    border: none;
+}
+
+body .main .btn:focus,
+body .main .btn:active,
+body .main .btn:hover {
+    filter: brightness(0.92);
+}
+
+body .main .drawn-row-wrapper .result-row {
+    margin-bottom: 1em;
+    text-transform: capitalize;
+}
+
+body .main .drawn-row-wrapper .result-row .text-red {
+    color: tomato;
+}
+body .main .drawn-row-wrapper .result-row .text-green {
+    color: green;
+}
+
+/* remove */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+    .container {
+        max-width: 570px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1070px;
+    }
+}
