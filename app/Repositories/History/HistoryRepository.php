@@ -18,16 +18,25 @@ class HistoryRepository extends BaseRepository implements HistoryRepositoryInter
         return  LottoDrawn::class;
     }
 
-    public function saveHistory($machineBalls, $userBalls)
+    /**
+     * @param $machineBalls
+     * @param $userBalls
+     * @return mixed
+     */
+    public function saveHistory($machineBalls, $userBalls): mixed
     {
-      $lotto =  $this->model->create([
+       return $this->model->create([
             'machine_balls' => $machineBalls,
             'user_balls' => $userBalls,
         ]);
-      return $lotto;
+
     }
 
-    public function getLastTenPlays() {
+    /**
+     * @return mixed
+     */
+    public function getLastTenPlays(): mixed
+    {
         return $this->model->latest()->take(10)->get();
     }
 }

@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LottoDrawnRequest;
 use App\Rules\UserBall;
 use App\Services\History\HistoryServiceInterface;
 use App\Services\Settings\SettingsServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 
 class LottoDrawnController extends Controller
 {

@@ -15,12 +15,20 @@ class HistoryService implements HistoryServiceInterface
         $this->historyRepository = $historyRepository;
     }
 
-    public function saveHistory($machineBalls, $userBalls)
+    /**
+     * @param $machineBalls
+     * @param $userBalls
+     * @return mixed
+     */
+    public function saveHistory($machineBalls, $userBalls): mixed
     {
         return $this->historyRepository->saveHistory($machineBalls, $userBalls);
     }
 
-    public function getLastTenPlays()
+    /**
+     * @return mixed
+     */
+    public function getLastTenPlays(): mixed
     {
         return $this->historyRepository->getLastTenPlays();
     }

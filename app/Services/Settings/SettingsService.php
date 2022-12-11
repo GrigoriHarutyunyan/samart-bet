@@ -2,16 +2,10 @@
 
 namespace App\Services\Settings;
 
-use App\Services\Settings\SettingsServiceInterface;
 use Illuminate\Support\Facades\Session;
 
 class SettingsService implements SettingsServiceInterface
 {
-    public function __construct()
-    {
-        //
-    }
-
     /**
      * Generate random numbers in a range for specified users
      * @param int $lottoNumbersCount
@@ -52,7 +46,15 @@ class SettingsService implements SettingsServiceInterface
         return $result;
     }
 
-
+    /**
+     * Keep last result in session
+     * @param $emptyBoard
+     * @param $machineBalls
+     * @param $userBalls
+     * @param $matchedBalls
+     * @param $result
+     * @param $lastTenPlays
+     */
     public function setSession($emptyBoard, $machineBalls, $userBalls, $matchedBalls, $result, $lastTenPlays)
     {
         Session::put('emptyBoard', $emptyBoard);
